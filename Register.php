@@ -10,12 +10,7 @@ session_start();
         $username = $_POST['username'];
         $password = $_POST['password]'];
 
-        if(!empty($username){
-            $query = "INSERT INTO Users (first_name, last_name, email, username, password) values ('$fname','$lname','$email','$username', '$password')";
+            $query = "INSERT INTO Users (first_name, last_name, email, username, password) VALUES ('$fname','$lname','$email','$username', '$password')";
             mysqli_query($con, $query);
             header("location: login.html");
-            die;
-        } else {
-            echo "Not valid";
         }
-    }
