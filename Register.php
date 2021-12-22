@@ -2,7 +2,7 @@
 
 session_start();
 
-$con = mysqli_connect('fdb31.runhosting.com','4011122_moexpense','Tanhayee14');
+$con = mysqli_connect('fdb31.runhosting.com','4011122_moexpense');
 
 mysqli_select_db($con, '4011122_moexpense');
 
@@ -12,7 +12,7 @@ $EMAIL = $_POST['email'];
 $USERNAME = $_POST['username'];
 $PASSWORD = $_POST['password'];
 
-$s = "select * from users where name = '$username'";
+$s = "select * from users where USERNAME = '$username'";
 
 $result = mysqli_query($con, $s);
 
