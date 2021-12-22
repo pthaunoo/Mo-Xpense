@@ -16,9 +16,7 @@ $s = "select * from users where name = '$username'";
 
 $result = mysqli_query($con, $s);
 
-$num = mysqli_num_rows($result);
-
-if($num ==1) {
+if($result ==1) {
   echo "Username Already Exists";
 } else {
   $reg = "INSERT INTO users(USERNAME, FIRST_NAME, LAST_NAME, EMAIL, PASSWORD) values ($USERNAME,$FIRST_NAME,$LAST_NAME,$EMAIL,$PASSWORD)";
