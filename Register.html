@@ -12,61 +12,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-        function validate(){
-        if(validateblank()==true && validatepassword()==true){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    function validatepassword(){
-        var p=document.getElementById("psw").value;
-        var cp=document.getElementById("psw-repeat").value;
-
-        if(p.trim()===cp.trim()){
-            alert("Password match");
-            return true;
-        }
-        else{
-            alert("Passwords do not match");
-            return false;
-        }
-    }
-    function validateblank(){
-        var fn=document.getElementById("name").value;
-        var ln=document.getElementById("uname").value;
-        var e=document.getElementById("email").value;
-        var p=document.getElementById("psw").value;
-        var cp=document.getElementById("psw-repeat").value;
-
-        if((fn.trim().length==0 || fn<1 || fn>0)&&(fn.trim().length<3)){
-            alert("Enter a Name with alphabets only");
-            return false;
-        }
-        if((ln.trim().length==0 || ln<1 || ln>0)&&(ln.trim().length<3)){
-            alert("Enter a Username");
-            return false;
-        }
-        if(e.trim().length==0 ){
-            alert("Enter an email address");
-            return false;
-        }
-        if(p.trim().length<8){
-            alert("Enter a password that is greater than 8");
-            return false;
-        }
-        
-        return true;
-    }
-
-  /*  window.addEventListener("scroll", function(){
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky",window.scrollY > 0);
-        })
-*/
-</script>
 
 </head>
 <body>
