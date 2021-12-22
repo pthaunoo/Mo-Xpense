@@ -6,11 +6,11 @@ $con = mysqli_connect('fdb31.runhosting.com','4011122_moexpense','Tanhayee14');
 
 mysqli_select_db($con, '4011122_moexpense');
 
-$FIRST_NAME = $_POST['fname'];
-$LAST_NAME = $_POST['lname'];
-$EMAIL = $_POST['email'];
-$USERNAME = $_POST['username'];
-$PASSWORD = $_POST['password'];
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$emailL = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $s = "select * from users where USERNAME = '$username'";
 
