@@ -21,7 +21,7 @@ $num = mysqli_num_rows($result);
 if($num ==1) {
   echo "Username Already Exists";
 } else {
-  $reg = "insert into users(USERNAME, FIRST_NAME, LAST_NAME, EMAIL, PASSWORD) values ($USERNAME,$FIRST_NAME,$LAST_NAME,$EMAIL,$PASSWORD)";
+  $reg = "INSERT INTO users(USERNAME, FIRST_NAME, LAST_NAME, EMAIL, PASSWORD) values ($USERNAME,$FIRST_NAME,$LAST_NAME,$EMAIL,$PASSWORD)";
   mysqlli_query($con, $reg);
   echo "User Created";
 }
