@@ -1,7 +1,7 @@
 <?php
 
 $dbhost = "fdb31.runhosting.com";
-$dbuser = "root";
+$dbuser = "4011122_moexpense";
 $dbpass = "Tanhayee14";
 $dbname = "4011122_moexpense";
 
