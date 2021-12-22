@@ -7,5 +7,5 @@ $dbname = "4011122_moexpense"
 
 if(!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname))
 {
-  die("failed to connect")
+  die("failed to connect");
 }
