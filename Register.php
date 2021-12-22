@@ -2,7 +2,6 @@
 session_start();
 
     include("connection.php");
-    include("function.php");
 
     if($_SERVER['REQUEST_METHOD'] =="POST"){
         $fname = $_POST['fname'];
