@@ -8,7 +8,7 @@ mysqli_select_db($con, '4011122_moexpense');
 
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
-$emailL = $_POST['email'];
+$email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
