@@ -12,5 +12,5 @@ session_start();
 
             $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
             mysqli_query($con, $query);
-            header("location: Login.php");
+            header('location: Login.html');
         }

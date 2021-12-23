@@ -2,11 +2,6 @@
 session_start();
 include("connection.php");
 
-if($_SERVER['REQUEST_METHOD'] =="POST"){
-    $firstname = $_POST['firstname'];
-        $query = "INSERT INTO test (firstname) VALUES ('$firstname')";
-        mysqli_query($con, $query);
-    }
 ?>
 
 <!DOCTYPE html>
