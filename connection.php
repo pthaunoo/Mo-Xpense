@@ -2,7 +2,7 @@
 
 $dbhost = "fdb31.runhosting.com";
 $dbuser = "4011122_moexpense";
-$dbpass = ${{secrets.DB_ACCESS}};
+$dbpass = "Tanhayee14";
 $dbname = "4011122_moexpense";
 
 if(!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname))
