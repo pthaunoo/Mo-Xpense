@@ -4,8 +4,9 @@ include("connection.php");
 
 if($_SERVER['REQUEST_METHOD'] =="POST"){
     $firstname = $_POST['firstname'];
-        $query = "INSERT INTO Users (FIRSTNAME) VALUES ('$firstname')";
+        $query = "INSERT INTO Users (firstname) VALUES ('$firstname')";
         mysqli_query($con, $query);
+        echo"added";
         header("location: Register1.php");
     }
 ?>
@@ -55,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] =="POST"){
         <div class="col-sm-6 banner-info">
             <form class="box" action="Register1.php" method="POST">
                 <h2 class="big-text">Register</h2>
-                <input type="text" name="" placeholder="FISRT NAME" id="first_name">
+                <input type="text" name="firstname" placeholder="FISRT NAME" id="firstname">
                 <input type="submit" name="" id="submit" class="button-submit" value="Register">
         </form>
         </div>
