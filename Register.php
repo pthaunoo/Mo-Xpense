@@ -10,7 +10,7 @@ session_start();
         $username = $_POST['username'];
         $password = $_POST['password]'];
 
-            $query = "INSERT INTO Users (first_name, last_name, email, username, password) VALUES ('$first_name','$last_name','$email','$username', '$password')";
+            $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
             mysqli_query($con, $query);
             header("location: login.html");
         }
