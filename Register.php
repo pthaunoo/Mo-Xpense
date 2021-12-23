@@ -8,9 +8,9 @@ session_start();
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
         $username = $_POST['username'];
-        $pass = $_POST['pass'];
+        $password = $_POST['password'];
 
-            $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASS) VALUES ('$first_name','$last_name','$email','$username', '$pass')";
+            $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
             mysqli_query($con, $query);
             header("location: Register1.php");
         }
