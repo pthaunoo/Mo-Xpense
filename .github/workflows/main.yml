@@ -11,8 +11,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        server: mo-xpense.atwebpages.com
+        server: moexpense.atwebpages.com
         username: 4011122_moexpense
         password: ${{ secrets.FTP_PASS }}
         protocol: ftps
-        server-dir: mo-xpense.atwebpages.com/
+        server-dir: moexpense.atwebpages.com/
