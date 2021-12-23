@@ -1,3 +1,14 @@
+<?php
+session_start();
+include("connection.php");
+
+if($_SERVER['REQUEST_METHOD'] =="POST"){
+    $firstname = $_POST['firstname'];
+        $query = "INSERT INTO Users (FIRSTNAME) VALUES ('$firstname')";
+        mysqli_query($con, $query);
+        header("location: Register1.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +43,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="Index.html">Home</a></li>
                     <li><a href="Login.html">Sign In</a></li>
-                    <li><a href="Register1.php">Register</a></li>
+                    <li><a href="Register.html">Register</a></li>
                     <li><a href="About.html">About</a></li>
                 </ul>
         </div> 
@@ -42,17 +53,12 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-6 banner-info">
-            <h1 class="big-text">Your budget tracker</h1>
-            <p class="para-text">With Mo-Xpense application, manage your personal finance at your finger tips anywhere, anytime. We care about the health of your finance and help you 
-                move forward in your journey.</p> 
+            <form class="box" action="Register1.php" method="POST">
+                <h2 class="big-text">Register</h2>
+                <input type="text" name="" placeholder="FISRT NAME" id="first_name">
+                <input type="submit" name="" id="submit" class="button-submit" value="Register">
+        </form>
         </div>
-            <form class="box" action="Login.html" method="POST">
-                <input type="submit" name="" value="Sign In">
-            </form>
-            <form class="box" action="Register.html" method="POST">
-                <input type="submit" name="" value="Register">
-            </form>
-        
         <div class="col-sm-6 banner-image">
             <img src="Images/Mologo.png" class="img-responsive">
         </div>
