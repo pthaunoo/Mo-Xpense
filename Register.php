@@ -12,10 +12,13 @@ session_start();
 
             if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($username) && !empty($password))
             {
-            $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
-            mysqli_query($con, $query);
-            header('location: Login.html');
+                $password = md5($password);
+                $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
+                mysqli_query($con, $query);
+                header('location: Login.html');
             } else {
                 echo "Please complete all fields";
             }
+            header("location: login.php");
+            die;
         }
