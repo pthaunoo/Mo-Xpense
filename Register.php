@@ -17,7 +17,7 @@ session_start();
                 mysqli_query($con, $query);
                 header('location: Login.html');
             } else {
-                alert("Please complete all fields");
+                echo "Please complete all fields";
             }
             header("location: login.php");
             die;
