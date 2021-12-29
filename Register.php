@@ -12,12 +12,12 @@ session_start();
 
             if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($username) && !empty($password))
             {
-                if { $check_user = "SELECT * FROM Users WHERE username = '$username' OR email = '$email' LIMIT 1";
-                    $output = mysqli_query($con, $check_user);
+                $check_user = "SELECT * FROM Users WHERE username = '$username' OR email = '$email' LIMIT 1";
+                $output = mysqli_query($con, $check_user);
                     if(mysqli_num_rows($output)==1){
                         header('location: Login.html');
                     } 
-                }else {
+                else {
                 $password = md5($password); //encrypting password sent to DB.
                 $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
                 mysqli_query($con, $query);
