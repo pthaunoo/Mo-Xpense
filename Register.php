@@ -10,7 +10,12 @@ session_start();
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+            if(!empty($first_name) && !empty($last_name) && !empty($email) && !empty($username) && !empty($password))
+            {
             $query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
             mysqli_query($con, $query);
             header('location: Login.html');
+            } else {
+                echo "Please complete all fields";
+            }
         }
