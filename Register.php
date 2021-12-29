@@ -19,6 +19,6 @@ session_start();
             } else {
                 echo "Please complete all fields";
             }
-            header("location: login.php");
+            header("location: Login.html");
             die;
         }
