@@ -10,6 +10,7 @@ session_start();
         $output = mysqli_query($con, $user_signin);
             if (mysqli_num_rows($output) > 0) {
                 $user = mysqli_fetch_assoc($output);
+                return $user;
                 if ($user['password'] === $password) {
                     $_SESSION[username] = $user['username'];
                     header('location: Homepage.php');
