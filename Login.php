@@ -22,10 +22,10 @@ $password    = "";
                 }
 
             } else {
-                header('location: Index.html');
+
             }
         } else {
-            echo"Failed";
+            header('location: Index.html');
             die;
         }   
         }
