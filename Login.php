@@ -18,7 +18,7 @@ $email    = "";
             header('location: homepage.php');
             die;
         } else {
-            header('location: Login.html');
+            echo"Failed";
             die;
         }   
         }
