@@ -1,5 +1,5 @@
-function validate(){
-    if(validateblank()==true && validateemail()==true ){
+function validation(){
+    if(validationreg()==true && validateemail()==true ){
         return true;
     }
     else{
@@ -7,7 +7,7 @@ function validate(){
     }
 }
 
-function validateblank(){
+function validationreg(){
 var fn=document.getElementById("first_name").value;
 var ln=document.getElementById("last_name").value;
 var e=document.getElementById("email").value;
