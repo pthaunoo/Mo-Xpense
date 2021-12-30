@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-// initializing variables
-$username = "";
-$password    = "";
     include("connection.php");
 
     if($_SERVER['REQUEST_METHOD'] =="POST"){
@@ -12,7 +9,7 @@ $password    = "";
 
         $user_signin = "SELECT * FROM Users WHERE username = '$username'";
         $output = mysqli_query($con, $user_signin);
-            if ($output && mysqli_num_rows($output) == 1) {
+            if (mysqli_num_rows($output) == 1) {
                     $_SESSION[username] = $user['username'];
                     header('location: Homepage.php');
                     die;
