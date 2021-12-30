@@ -19,7 +19,6 @@ $email    = "";
             header('location: Login.html');
             die;
         } else {
-            $password = md5($password); //encrypting password sent to DB
             $add_query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
             mysqli_query($con, $add_query);
             $_SESSION['username'] = $username;
