@@ -18,10 +18,8 @@ $password    = "";
                     header('location: Homepage.php');
                     die;
                 }
-
-            }
          else {
             header('location: Index.html');
             die;
         }   
-        }
+    }
