@@ -16,7 +16,7 @@ $email    = "";
         $user_query = "SELECT * FROM Users WHERE username = '$username' OR email='$email' LIMIT 1";
         $output = mysqli_query($con, $user_query);
         if (mysqli_num_rows($output) == 1) {
-           header('location: login.html');
+           header('location: Login.html');
         } else {
             $password = md5($password); //encrypting password sent to DB
             $add_query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
