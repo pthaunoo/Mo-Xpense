@@ -1,5 +1,5 @@
 function validation(){
-    if(validationreg()==true ){
+    if(validationreg()==true && validationlogin() ==true  ){
         return true;
     }
     else{
