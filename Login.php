@@ -13,7 +13,7 @@ $password    = "";
         $user_query = "SELECT * FROM Users WHERE username = '$username'";
         $output = mysqli_query($con, $user_query);
         if ($output) {
-            if ($outpur && mysqli_num_rows($result)>0) {
+            if ($output && mysqli_num_rows($result)>0) {
                 $user = mysqli_fetch_assoc($result);
                 if ($user['password'] === $password) {
                     $_SESSION[username] = $user['username'];
