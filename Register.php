@@ -13,10 +13,11 @@ $email    = "";
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $user_query = "SELECT * FROM Users WHERE username = '$username' OR email='$email' LIMIT 1";
+        $user_query = "SELECT * FROM Users WHERE username = '$username' OR email='$email'";
         $output = mysqli_query($con, $user_query);
-        if (mysqli_num_rows($output) == 1) {
-           header('location: Login.html');
+        if (mysqli_num_rows($output) > 0) {
+           echo "User Already Exist!";
+            header('location: Login.html');
         } else {
             $password = md5($password); //encrypting password sent to DB
             $add_query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
