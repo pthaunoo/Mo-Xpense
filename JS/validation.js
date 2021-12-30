@@ -1,5 +1,5 @@
 function validation(){
-    if(validationreg()==true && validationlogin()==true ){
+    if(validationreg()==true){
         return true;
     }
     else{
@@ -39,6 +39,14 @@ var p=document.getElementById("password").value;
 }
 
 function validationlogin(){
+    if(loginblank()==true ){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function loginblank(){
     var us=document.getElementById("username").value;
     var pe=document.getElementById("password").value;
     
