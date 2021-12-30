@@ -12,7 +12,7 @@ $password    = "";
 
         $user_signin = "SELECT * FROM Users WHERE username = '$username'";
         $output = mysqli_query($con, $user_signin);
-            if ($output && mysqli_num_rows($result) == 1) {
+            if ($output && mysqli_num_rows($output) == 1) {
                     $_SESSION[username] = $user['username'];
                     header('location: Homepage.php');
                     die;
