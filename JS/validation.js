@@ -1,5 +1,5 @@
 function validate(){
-    if(validateblank()==true){
+    if(validateblank()==true && validateemail()==true ){
         return true;
     }
     else{
@@ -14,30 +14,40 @@ function validate(){
     var u=document.getElementById("username").value;
     var p=document.getElementById("password").value;
 
-    if(fn.trim().length==0){
-        alert("Enter a First Name with alphabets only");
-        return false;
-    }
-    if(ln.trim().length==0){
-        alert("Enter a Last Name with alphabets only");
-        return false;
-    }
-    if(ln.trim().length==0 ){
-        alert("Enter a Username");
-        return false;
-    }
-    if(e.trim().length==0 ){
-        alert("Enter an email address");
-        return false;
-    }
-    if(u.trim().length==0 ){
-        alert("Enter an email address");
-        return false;
-    }    
-    if(p.trim().length<8){
-        alert("Enter a password that is greater than 8");
-        return false;
+        if(fn.trim().length==0){
+            alert("Enter a First Name with alphabets only");
+            return false;
+        }
+        if(ln.trim().length==0){
+            alert("Enter a Last Name with alphabets only");
+            return false;
+        }
+        if(ln.trim().length==0 ){
+            alert("Enter a Username");
+            return false;
+        }
+        if(e.trim().length==0 ){
+            alert("Enter an email address");
+            return false;
+        }
+        if(u.trim().length==0 ){
+            alert("Enter an email address");
+            return false;
+        }    
+        if(p.trim().length<8){
+            alert("Enter a password that is greater than 8");
+            return false;
+        }
+
+        return true;
     }
 
-    return true;
+    function validateemail(){
+        var a=$_SESSION['email'];
+        var e=document.getElementById("email").value;
+        if(a.trim() = e.trim()){
+            alert("User Already Exist");
+            return false;
+        }
+        return true;
     }
