@@ -10,7 +10,7 @@ $password    = "";
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $user_query = "SELECT * FROM Users WHERE username = '$username' AND password='$password'";
+        $user_query = "SELECT * FROM Users WHERE username = '$username'";
         $output = mysqli_query($con, $user_query);
         if ($output) {
             if ($outpur && mysqli_num_rows($result)>0) {
