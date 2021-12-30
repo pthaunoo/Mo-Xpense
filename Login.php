@@ -3,7 +3,7 @@ session_start();
 
 // initializing variables
 $username = "";
-$email    = "";
+$password    = "";
     include("connection.php");
 
     if($_SERVER['REQUEST_METHOD'] =="POST"){
@@ -11,7 +11,7 @@ $email    = "";
         $password = $_POST['password'];
 
         $password = md5($password);
-        $user_query = "SELECT * FROM Users WHERE username = '$username' OR email='$email'";
+        $user_query = "SELECT * FROM Users WHERE username = '$username' AND password='$password'";
         $output = mysqli_query($con, $user_query);
         if (mysqli_num_rows($output) == 1) {
             $_SESSION['username'] = $username;
