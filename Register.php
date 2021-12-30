@@ -15,8 +15,6 @@ $email    = "";
 
         $user_query = "SELECT * FROM Users WHERE username = '$username' OR email='$email' LIMIT 1";
         $output = mysqli_query($con, $user_query);
-        $_SESSION['username'] = $username;
-        $_SESSION['email'] = $email;
         if (mysqli_num_rows($output) == 1) {
            header('location: Login.html');
         } else {
