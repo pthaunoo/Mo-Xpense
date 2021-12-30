@@ -1,3 +1,8 @@
+<?php
+session_start();
+$name= $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +17,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="/JS/validation.js"></script>
 
 </head>
 <body>
@@ -32,10 +35,7 @@
 
             <div class="collapse navbar-collapse" id="iconm">   
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="Login.html">Sign In</a></li>
-                    <li><a href="Register.html">Register</a></li>
-                    <li><a href="About.html">About</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
         </div> 
         </div>
@@ -44,7 +44,7 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-6 banner-info">
-            <form class="box" action="Register.php" method="POST" onsubmit="return validate()">
+            <form class="box" action="Register.php" method="POST">
                 <h2 class="big-text">Register</h2>
                 <input type="text" name="first_name" placeholder="FISRT NAME" id="first_name">
                 <input type="text" name="last_name" placeholder="LAST NAME" id="last_name">
