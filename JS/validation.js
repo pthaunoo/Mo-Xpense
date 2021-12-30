@@ -50,11 +50,11 @@ function loginblank(){
     var us=document.getElementById("username").value;
     var pe=document.getElementById("password").value;
     
-        if(u.trim().length==0 ){
+        if(us.trim().length==0 ){
             alert("Enter a Username");
             return false;
         }
-        if(p.trim().length==0){
+        if(pe.trim().length==0){
             alert("Enter a password that is greater than 8");
             return false;
         }
