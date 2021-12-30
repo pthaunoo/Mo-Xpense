@@ -8,8 +8,8 @@ function validate(){
 }
 
 function validateblank(){
-var fn=document.getElementById("fisrtname").value;
-var ln=document.getElementById("lastname").value;
+var fn=document.getElementById("fisrt_name").value;
+var ln=document.getElementById("last_name").value;
 var e=document.getElementById("email").value;
 var p=document.getElementById("username").value;
 var cp=document.getElementById("password").value;
