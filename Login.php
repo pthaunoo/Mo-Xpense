@@ -15,11 +15,9 @@ $password    = "";
         $output = mysqli_query($con, $user_usersignin);
             if ($output && mysqli_num_rows($result) == 1) {
                     $_SESSION[username] = $user['username'];
-                    header('location: user.php');
+                    header('location: Homepage.php');
                     die;
                 }
-
-            } else {
 
             }
          else {
