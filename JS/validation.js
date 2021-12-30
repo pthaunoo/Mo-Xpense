@@ -1,5 +1,5 @@
 function validation(){
-    if(validationreg()==true && validationlogin() ==true  ){
+    if(validationreg()==true && validationlogin()==true ){
         return true;
     }
     else{
@@ -15,23 +15,23 @@ var u=document.getElementById("username").value;
 var p=document.getElementById("password").value;
 
     if(fn.trim().length==0){
-        alert("Enter a First Name");
+        alert("Please enter First Name");
         return false;
     }
     if(ln.trim().length==0){
-        alert("Enter a Last Name");
+        alert("Please enter Last Name");
         return false;
     }
     if(e.trim().length==0 ){
-        alert("Enter an email address");
+        alert("Please enter email address");
         return false;
     }   
     if(u.trim().length==0 ){
-        alert("Enter a Username");
+        alert("Please enter Username");
         return false;
     }
     if(p.trim().length<8){
-        alert("Enter a password that is greater than 8");
+        alert("Password requirement to be at least 8 characters");
         return false;
     }
 
@@ -39,8 +39,8 @@ var p=document.getElementById("password").value;
 }
 
 function validationlogin(){
-    var u=document.getElementById("username").value;
-    var p=document.getElementById("password").value;
+    var us=document.getElementById("username").value;
+    var pe=document.getElementById("password").value;
     
         if(u.trim().length==0 ){
             alert("Enter a Username");
