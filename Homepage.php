@@ -48,7 +48,7 @@ $_SESSION['username'];
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text">Transactions</h2>
                 <label for=""><b>Select category</b></label> <br>
-                    <input type="radio" name="transaction" value="1" required/> Income<br>
+                    <input type="radio" name="transaction" value="1" required/> Income
                     <input type="radio" name="transaction" value="0" required/> Expense<p>
                     <label for="email"><b>Amount</b></label><br>
 				    <input type="text" placeholder="Enter the Amount" name="amount" required><p>
