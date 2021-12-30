@@ -1,18 +1,19 @@
 <?php
 session_start();
 
+// initializing variables
+$username = "";
+$password    = "";
     include("connection.php");
 
     if($_SERVER['REQUEST_METHOD'] =="POST"){
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $user_signin = "SELECT * FROM Users WHERE username = '$username'";
+
+        $user_signin = "SELECT * FROM Users WHERE username = '$username' AND password = '$password'";
         $output = mysqli_query($con, $user_signin);
-            if (mysqli_num_rows($output) > 0) {
-                $user = mysqli_fetch_assoc($output);
-                return $user;
-                if ($user['password'] === $password) {
-                    $_SESSION[username] = $user['username'];
+            if ($output && mysqli_num_rows($result) == 1) {
+                    //$_SESSION[username] = $user['username'];
                     header('location: Homepage.php');
                     die;
                 }
@@ -21,6 +22,5 @@ session_start();
                         die;
                 }
 
-        }
-    }   
+        }   
     
