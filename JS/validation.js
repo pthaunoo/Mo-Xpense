@@ -1,5 +1,5 @@
 function validationreg(){
-    if(blankregr()==true){
+    if(blankreg()==true){
         return true;
     }
     else{
