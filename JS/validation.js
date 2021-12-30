@@ -38,3 +38,18 @@ var p=document.getElementById("password").value;
     return true;
 }
 
+function validationlogin(){
+    var u=document.getElementById("username").value;
+    var p=document.getElementById("password").value;
+    
+        if(u.trim().length==0 ){
+            alert("Enter a Username");
+            return false;
+        }
+        if(p.trim().length==0){
+            alert("Enter a password that is greater than 8");
+            return false;
+        }
+    
+        return true;
+    }

@@ -12,6 +12,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/JS/validation.js"></script>
 </head>
 <body>
     <header class="header">
@@ -41,7 +43,7 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-6 banner-info">
-            <form class="box" action="Login.php" method="POST">
+            <form class="box" action="Login.php" method="POST" onsubmit="return validation()">
                 <h2 class="big-text">Sign In</h2>
                 <input type="text" name="username" placeholder="USERNAME" id="username">
                 <input type="password" name="password" placeholder="PASSWORD" id="password">
