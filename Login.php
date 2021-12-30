@@ -6,7 +6,7 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] =="POST"){
         $username = $_POST['username'];
         $password = $_POST['password'];
-
+        $password = md5($password); //encrypting password sent to DB
         $user_signin = "SELECT * FROM Users WHERE username = '$username'";
         $output = mysqli_query($con, $user_signin);
             if (mysqli_num_rows($output) > 0) {
