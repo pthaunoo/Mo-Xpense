@@ -10,6 +10,7 @@ $password    = "";
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+        $password = md5($password); //encrypting password sent to DB
         $user_query = "SELECT * FROM Users WHERE username = '$username'";
         $output = mysqli_query($con, $user_query);
         if ($output) {
