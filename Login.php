@@ -10,7 +10,6 @@ $password    = "";
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $password = md5($password);
         $user_query = "SELECT * FROM Users WHERE username = '$username' AND password='$password'";
         $output = mysqli_query($con, $user_query);
         if (mysqli_num_rows($output) == 1) {
