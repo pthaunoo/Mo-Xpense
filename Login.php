@@ -15,7 +15,6 @@ $email    = "";
         $output = mysqli_query($con, $user_query);
         if (mysqli_num_rows($output) == 1) {
             $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
             header('location: homepage.php');
             die;
         } else {
