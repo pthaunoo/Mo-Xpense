@@ -11,12 +11,9 @@ $password    = "";
         $password = $_POST['password'];
 
         $password = md5($password); //encrypting password sent to DB
-        $user_query = "SELECT * FROM Users WHERE username = '$username'";
-        $output = mysqli_query($con, $user_query);
-        if ($output) {
-            if ($output && mysqli_num_rows($result)>0) {
-                $user = mysqli_fetch_assoc($result);
-                if ($user['password'] === $password) {
+        $user_signin = "SELECT * FROM Users WHERE username = '$username' AND password = '$password'";
+        $output = mysqli_query($con, $user_usersignin);
+            if ($output && mysqli_num_rows($result) == 1) {
                     $_SESSION[username] = $user['username'];
                     header('location: homepage.php');
                     die;
@@ -25,7 +22,7 @@ $password    = "";
             } else {
 
             }
-        } else {
+         else {
             header('location: Index.html');
             die;
         }   
