@@ -1,5 +1,5 @@
 function validation(){
-    if(validationreg()==true && validateemail()==true ){
+    if(validationreg()==true ){
         return true;
     }
     else{
@@ -15,25 +15,21 @@ var u=document.getElementById("username").value;
 var p=document.getElementById("password").value;
 
     if(fn.trim().length==0){
-        alert("Enter a First Name with alphabets only");
+        alert("Enter a First Name");
         return false;
     }
     if(ln.trim().length==0){
-        alert("Enter a Last Name with alphabets only");
-        return false;
-    }
-    if(ln.trim().length==0 ){
-        alert("Enter a Username");
+        alert("Enter a Last Name");
         return false;
     }
     if(e.trim().length==0 ){
         alert("Enter an email address");
         return false;
-    }
+    }   
     if(u.trim().length==0 ){
-        alert("Enter an email address");
+        alert("Enter a Username");
         return false;
-    }    
+    }
     if(p.trim().length<8){
         alert("Enter a password that is greater than 8");
         return false;
