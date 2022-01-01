@@ -73,15 +73,8 @@ $output = mysqli_query($con, $query);
         </div> 
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="col">
-            <div class="col-sm-6 m-auto">
-                    <h2 class="big-text">Expenses</h2>
-                    <div class="card-body">
-                            <div id="piechart"></div>
-                    </div> 
-            </div>
-        </div>
+       <div id="piechart"></div>
+
 
 </body>
 </html>
