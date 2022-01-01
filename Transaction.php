@@ -11,9 +11,10 @@ include("connection.php");
         
             $add_tran = "INSERT INTO transaction (username, date, cat_id, amount, desc_id) VALUES ('$username','$date','$cat_id','$amount', '$description')";
             mysqli_query($con, $add_tran);
-        }   
+           
         if ($add_tran) {
             header('location: Homepage.php');
             die;
         }
-        }
+    }
+        
