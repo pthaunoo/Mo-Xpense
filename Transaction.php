@@ -2,7 +2,7 @@
 
 session_start();
 include("connection.php");
-    if($_SERVER['REQUEST_METHOD'] =="POST"){
+    if(isset($_POST['add_tran'])){
         $username = $_POST['username'];
         $date = $_POST['date'];
         $cat_id = $_POST['cat_id'];
@@ -14,7 +14,7 @@ include("connection.php");
         mysqli_query($con, $add_tran);
            
         if ($add_tran) {
+            echo '<script type = "text/javascript">alert("Transaction Added")</script>';
             header('location: Homepage.php');
-            die;
         }
         }
