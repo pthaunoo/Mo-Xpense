@@ -35,11 +35,6 @@ include("gettran.php");
 
 </head>
 <body>  
-           <br /><br />  
-           <div style="width:900px;">  
-                <h3 align="center">Make Simple Pie Chart by Google Chart API with PHP Mysql</h3>  
-                <br />  
-                <div id="piechart" style="width: 900px; height: 500px;"></div>  
-           </div>  
-      </body>  
+     <div id="piechart"></div>  
+</body>  
 </html>
