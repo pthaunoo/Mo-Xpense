@@ -2,7 +2,7 @@
 
 function check_login($con)
 {
-    if(isset($_session['name'])){
+    if(isset($_session['username'])){
         $user= $_SESSION['username'];
         $query = "select * from users where username = '$user'";
         $result = mysqli_query($con,$query);
