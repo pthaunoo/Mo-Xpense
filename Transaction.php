@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-//$username = $_SESSION['username'];
 include("connection.php");
     if($_SERVER['REQUEST_METHOD'] =="POST"){
         $username = $_POST['username'];
