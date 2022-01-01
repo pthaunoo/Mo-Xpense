@@ -56,10 +56,19 @@ $user= $_SESSION['username'];
                 <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
-        <div class="col-sm-6 banner-image">
-            <img src="Images/Mologo.png" class="img-responsive">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card mt-4">
+                        <div class="card-header">Expenses</div>
+                        <div class="card-body">
+                            <div class="chart-container pie-chart">
+                                <canvas id="pie_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
         </div>
-    </div>
 
 </body>
 </html>
