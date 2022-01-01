@@ -7,7 +7,7 @@ $query = "
 		FROM transactions tran
         inner join tran_category ref
         on tran.cat_id = ref.cat_id
-        where tran.username = '$user'
+        where tran.username = 'Praveen'
 		GROUP BY category
 		";
 $output = mysqli_query($con, $query);
