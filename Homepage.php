@@ -18,7 +18,7 @@ include("gettran.php");
     <script	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="/JS/validation.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts.loader.js"></script>
-    <script type="text/javascript>
+    <script type="text/javascript">
         google.charts.load('current',{'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
