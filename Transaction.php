@@ -15,6 +15,5 @@ include("connection.php");
            
         if ($add_tran) {
             echo '<script type = "text/javascript">alert("Transaction Added")</script>';
-            header('location: Homepage.php');
         }
         }
