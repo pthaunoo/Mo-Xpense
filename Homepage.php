@@ -37,6 +37,7 @@ include("gettran.php");
             var chart = new google.visualization.Piechart(document.getElementById('piechart'));
 
             chart.draw(data, mytitle);
+        }
             </script>
 
 </head>
