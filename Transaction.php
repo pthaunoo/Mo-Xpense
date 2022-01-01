@@ -8,7 +8,7 @@ include("connection.php");
         $amount = $_POST['amount'];
         $description = $_POST['description'];
         
-            $add_tran = "INSERT INTO transaction (username, date, cat_id, amount, desc_id) VALUES ('$username','$date','$cat_id','$amount', '$description')";
+            $add_tran = "INSERT INTO transactions (username, date, cat_id, amount, desc_id) VALUES ('$username','$date','$cat_id','$amount', '$description')";
             mysqli_query($con, $add_tran);
            
         if ($add_tran) {
