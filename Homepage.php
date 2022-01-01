@@ -1,7 +1,7 @@
 <?php
 session_start();
 $user= $_SESSION['username'];
-
+include("gettran.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +16,28 @@ $user= $_SESSION['username'];
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-
     <script type="text/javascript" src="/JS/validation.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts.loader.js"></script>
+    <script type="text/javascript>
+        google.charts.load('current',{'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart(){
+            <?php
+                while($piechart = mysqli_fetch_assoc($output))
+                {
+                    echo "['".$piechart['category']."',".$piechart['Total']."],";
+                }
+            ?>
+
+            var mytitle = {
+                title: 'my chart;
+            };
+
+            var chart = new google.visualization.Piechart(document.getElementById('piechart'));
+
+            chart.draw(data, mytitle);
+            </script>
 
 </head>
 <body>
@@ -62,7 +82,7 @@ $user= $_SESSION['username'];
                         <h2 class="big-text">Expenses</h2>
                         <div class="card-body">
                             <div class="chart-container pie-chart">
-                                <canvas id="pie_chart"></canvas>
+                                <div id="piechart"></div>
                             </div>
                         </div> 
                 </div>
