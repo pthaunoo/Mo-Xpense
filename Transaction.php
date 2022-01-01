@@ -9,12 +9,12 @@ include("connection.php");
         $cat_id = $_POST['cat_id'];
         $amount = $_POST['amount'];
         $description = $_POST['description'];
-        {
-            $add_tran = "INSERT INTO transaction (username, date, cat_id, amount, description,) VALUES ('$username','$date','$cat_id','$amount', '$description')";
-            mysqli_query($con, $add_tran);
-        }   
+        
+        $add_tran = "INSERT INTO transaction (username, date, cat_id, amount, description,) VALUES ('$username','$date','$cat_id','$amount', '$description')";
+        mysqli_query($con, $add_tran);
+           
         if ($add_tran) {
-            header('location: Login.html');
+            header('location: Homepage.php');
             die;
         }
         }
