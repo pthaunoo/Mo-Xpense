@@ -1,7 +1,7 @@
 <?php
 session_start();
 $user= $_SESSION['username'];
-//include("gettran.php");
+include("gettran.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,6 @@ $user= $_SESSION['username'];
             var data = google.visualization.arrayToDataTable([
                 ['category', 'Total'],
                 <?php
-                include("gettran.php");
                 while($row = mysqli_fetch_array($output))
                 {
                     echo "['".$row["category"]."',".$row["Total"]."],";
