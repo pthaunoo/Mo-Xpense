@@ -1,6 +1,7 @@
 <?php
 session_start();
 $user= $_SESSION['username'];
+include("Function.php");
 ?>
 \<!DOCTYPE html>
 <html lang="en">
@@ -10,12 +11,11 @@ $user= $_SESSION['username'];
     <link rel="icon" href="Images/MoIcon.ico"/>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
 
     <script type="text/javascript" src="/JS/validation.js"></script>
 
