@@ -36,7 +36,7 @@ $output = mysqli_query($con, $query);
 </head>
 <body>
     <div style = "width:900px;">
-       <div id="piechart"></div>
+       <div id="piechart" style="width: 900px; height:500px;"></div>
     </div>
 </body>
 </html>
