@@ -10,4 +10,4 @@ $query = "
         where tran.username = '$username'
 		GROUP BY category
 		";
-$output = mysqli_fetch_assoc($con, $query);
+$output = mysqli_query($con, $query);
