@@ -16,7 +16,7 @@ $output = mysqli_query($con, $query);
                 var data = google.visualization.arrayToDataTable([  
                           ['cat_id', 'total'],  
                           <?php  
-                          while($row = mysqli_fetch_array($result))  
+                          while($row = mysqli_fetch_array($output))  
                           {  
                                echo "['".$row["cat_id"]."', ".$row["total"]."],";  
                           }  
@@ -33,9 +33,12 @@ $output = mysqli_query($con, $query);
            </script>  
 
 </head>
-<body>
-    <div style = "width:900px;">
-       <div id="piechart" style="width: 900px; height:500px;"></div>
-    </div>
-</body>
+<body>  
+           <br /><br />  
+           <div style="width:900px;">  
+                <h3 align="center">Make Simple Pie Chart by Google Chart API with PHP Mysql</h3>  
+                <br />  
+                <div id="piechart" style="width: 900px; height: 500px;"></div>  
+           </div>  
+      </body>  
 </html>
