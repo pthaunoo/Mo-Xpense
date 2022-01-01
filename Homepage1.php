@@ -1,12 +1,7 @@
 <?php
 include("connection.php");
 $query = "SELECT ref.cat_desc as category, sum(tran1.amount) AS Total
-		FROM transactions as tran1
-        inner join tran_category as ref
-        on tran.cat_id = ref.cat_id
-        where tran1.username = 'Praveen'
-		GROUP BY category
-		";
+		FROM transactions as tran1 inner join tran_category as ref on tran1.cat_id = ref.cat_id where tran1.username = 'Praveen' GROUP BY category";
 $output = mysqli_query($con, $query);
 ?>
 <!DOCTYPE html>
