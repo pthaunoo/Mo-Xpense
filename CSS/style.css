@@ -129,11 +129,3 @@ a.btn:hover{
     box-shadow: 5px 5px 10px #999;
     transition: 0.3s;
 }
-
-.box input[type="radio"]{
-    border: 0;
-    background: none;
-    text-align: center;
-    color: black;
-    transition: 0.25px;
-}
