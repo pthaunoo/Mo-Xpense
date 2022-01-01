@@ -53,7 +53,7 @@ $username= $_SESSION['username'];
 				    <input type="integer" placeholder="Amount" name="amount" required><p>
 				    <input type="date" placeholder="Please capture date" name="date" required><p>
 				    <input type="integer" placeholder="Description" name="description" required><p>
-                <input type="submit" name="add_tran" id="submit" class="button-submit" value="Add Transaction">
+                <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
         <div class="col-sm-6 banner-image">
