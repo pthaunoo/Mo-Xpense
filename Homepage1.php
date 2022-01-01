@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-$query = "SELECT cat_id, sum(tran1.amount) AS Total FROM transactions WHERE username = 'Praveen' GROUP BY cat_id";
+$query = "SELECT cat_id, sum(amount) AS total FROM transactions WHERE username = 'Praveen' GROUP BY cat_id";
 $output = mysqli_query($con, $query);
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $output = mysqli_query($con, $query);
         function drawChart()
         {
             var data = google.visualization.arrayToDataTable([
-                ['cat_id', 'Total'],
+                ['cat_id', 'total'],
                 <?php
                 while($row = mysqli_fetch_array($output))
                 {
