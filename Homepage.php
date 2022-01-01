@@ -2,6 +2,7 @@
 session_start();
 $user= $_SESSION['username'];
 include("Function.php");
+$user_data = check_login($con);
 ?>
 \<!DOCTYPE html>
 <html lang="en">

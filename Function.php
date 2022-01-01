@@ -1,13 +1,12 @@
 <?php
-include("connection.php");
+
 function check_login($con)
 {
-    if(isset($_session['username'])){
-        $id = $_SESSION['username']
-        $query = "select * from users where username = '$id' limit1";
-
+    if(isset($_session['name'])){
+        $user= $_SESSION['username'];
+        $query = "select * from users where username = '$user'";
         $result = mysqli_query($con,$query)
-        if($result && mysqli_num_rows($result)>0){
+        if(mysqli_num_rows($result)>0){
             $user_data = mysqli_fetch_assoc($result);
             return $user_data;
         }
