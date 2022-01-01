@@ -47,7 +47,7 @@ $_SESSION['username'];
         <div class="col-sm-6 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text">Transactions</h2>
-                    <input type="radio" name="transaction" value="6" checked="checked" required/> Income<br>
+                    <input type="radio" name="transaction" value="6" checked="checked" class="l_radio" required/> Income<br>
                     <input type="radio" name="transaction" value="7" required/> Expense<p>
 				    <input type="text" placeholder="Amount" name="amount" required><p>
 				    <input type="date" placeholder="Date" name="date" required><p>
