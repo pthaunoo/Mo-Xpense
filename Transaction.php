@@ -1,5 +1,6 @@
 <?php
 session_start();
+$user = $_SESSION['username'];
 include("connection.php");
     if($_SERVER['REQUEST_METHOD'] =="POST"){
         $username = $_POST['username'];
@@ -8,7 +9,7 @@ include("connection.php");
         $amount = $_POST['amount'];
         $description = $_POST['description'];
         
-            $add_tran = "INSERT INTO transactions (username, date, cat_id, amount, desc_id) VALUES ('$username','$date','$cat_id','$amount', '$description')";
+            $add_tran = "INSERT INTO transactions (username, date, cat_id, amount, desc_id) VALUES ('$user','$date','$cat_id','$amount', '$description')";
             mysqli_query($con, $add_tran);
            
         if ($add_tran) {
