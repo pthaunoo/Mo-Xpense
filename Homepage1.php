@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-$query = "SELECT cat_id, sum(tran1.amount) AS Total FROM transactions username = 'Praveen' GROUP BY cat_id";
+$query = "SELECT cat_id, sum(tran1.amount) AS Total FROM transactions WHERE username = 'Praveen' GROUP BY cat_id";
 $output = mysqli_query($con, $query);
 ?>
 <!DOCTYPE html>
