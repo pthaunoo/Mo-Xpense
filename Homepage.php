@@ -58,15 +58,13 @@ $user= $_SESSION['username'];
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="card mt-4">
+                <div class="col-sm-6 banner-info">
                         <div class="big-text">Expenses</div>
                         <div class="card-body">
                             <div class="chart-container pie-chart">
                                 <canvas id="pie_chart"></canvas>
                             </div>
-                        </div>
-                    </div>    
+                        </div> 
                 </div>
         </div>
 
