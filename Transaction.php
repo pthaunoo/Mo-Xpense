@@ -3,7 +3,7 @@
 session_start();
 $username= $_SESSION['username'];
 include("connection.php");
-    if(isset($_POST['add_tran'])){
+    if($_SERVER['REQUEST_METHOD'] =="POST"){
         $date = $_POST['date'];
         $cat_id = $_POST['cat_id'];
         $amount = $_POST['amount'];
