@@ -1,8 +1,7 @@
 <?php
 session_start();
-//$user= $_SESSION['username'];
-include("Function.php");
-$user_data = check_login($con);
+$user= $_SESSION['username'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
