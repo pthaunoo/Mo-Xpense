@@ -1,10 +1,10 @@
 <?php
 session_start();
-$user= $_SESSION['username'];
+//$user= $_SESSION['username'];
 include("Function.php");
 $user_data = check_login($con);
 ?>
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Mo-Xpense - Track It or Waste It</title>
