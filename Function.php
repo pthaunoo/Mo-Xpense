@@ -1,5 +1,5 @@
 <?php
-
+include("connection.php");
 function check_login($con)
 {
     if(isset($_session['username'])){
