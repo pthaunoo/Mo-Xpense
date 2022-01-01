@@ -75,8 +75,8 @@ include("gettran.php");
                             <div class="size">Income</div>
                         </div>
                     </label>   
-                    <input type="radio" name="cat_id" value="6" id = "1" class="hidebtn" required>
-                    <label for="1" class="lbl-radio">
+                    <input type="radio" name="cat_id" value="6" id = "2" class="hidebtn" required>
+                    <label for="2" class="lbl-radio">
                         <div class = "display-box">
                             <div class="size">Expense</div>
                         </div>
