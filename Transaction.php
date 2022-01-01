@@ -1,9 +1,10 @@
 <?php
+
 session_start();
 $username= $_SESSION['username'];
 include("connection.php");
-    if($_SERVER['REQUEST_METHOD'] =="POST"){
-        $username= $_POST['username'];
+    if(isset($_POST['add_tran'])){
+        $username = $_POST['username'];
         $date = $_POST['date'];
         $cat_id = $_POST['cat_id'];
         $amount = $_POST['amount'];
