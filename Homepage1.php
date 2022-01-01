@@ -1,7 +1,6 @@
 <?php
 include("connection.php");
-$query = "SELECT ref.cat_desc as category, sum(tran1.amount) AS Total
-		FROM transactions as tran1 inner join tran_category as ref on tran1.cat_id = ref.cat_id where tran1.username = 'Praveen' GROUP BY category";
+$query = "SELECT cat_id, sum(tran1.amount) AS Total FROM transactions username = 'Praveen' GROUP BY cat_id";
 $output = mysqli_query($con, $query);
 ?>
 <!DOCTYPE html>
@@ -16,11 +15,11 @@ $output = mysqli_query($con, $query);
         function drawChart()
         {
             var data = google.visualization.arrayToDataTable([
-                ['category', 'Total'],
+                ['cat_id', 'Total'],
                 <?php
                 while($row = mysqli_fetch_array($output))
                 {
-                    echo "['".$row["category"]."',".$row["Total"]."],";
+                    echo "['".$row["cat_id"]."',".$row["Total"]."],";
                 }
                 ?>
             ]);
