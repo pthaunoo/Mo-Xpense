@@ -35,6 +35,14 @@ include("gettran.php");
 
 </head>
 <body>  
-     <div id="piechart"></div>  
+<div class="container-fluid">
+            <div class="col">
+                <div class="col-sm-6 m-auto">
+                        <h2 class="big-text">Expenses</h2>
+                        <div class="card-body">
+                                <div id="piechart"></div>
+                        </div> 
+                </div>
+            </div>
 </body>  
 </html>
