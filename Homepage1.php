@@ -1,7 +1,8 @@
 <?php
+session_start();
+$user = $_SESSION['username'];
 include("connection.php");
-$query = "SELECT cat_id, sum(amount) AS total FROM transactions WHERE username = 'Praveen' GROUP BY cat_id";
-$output = mysqli_query($con, $query);
+include("gettran.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,11 +15,11 @@ $output = mysqli_query($con, $query);
            function drawChart()  
            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['cat_id', 'total'],  
+                          ['category', 'total'],  
                           <?php  
                           while($row = mysqli_fetch_array($output))  
                           {  
-                               echo "['".$row["cat_id"]."', ".$row["total"]."],";  
+                               echo "['".$row["category"]."', ".$row["total"]."],";  
                           }  
                           ?>  
                      ]);  
@@ -28,7 +29,7 @@ $output = mysqli_query($con, $query);
                       pieHole: 0.4  
                      };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
-                chart.draw(data, options);  
+                chart.draw(data);  
            }  
            </script>  
 
