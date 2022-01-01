@@ -33,11 +33,6 @@ include("gettran.php");
                           }  
                           ?>  
                      ]);  
-                var options = {  
-                      title: 'Percentage of Male and Female Employee',  
-                      //is3D:true,  
-                      pieHole: 0.4  
-                     };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
                 chart.draw(data);  
            }  
@@ -84,7 +79,7 @@ include("gettran.php");
                 <div class="col-sm-6 banner-info">
                         <h2 class="big-text">Expenses</h2>
                         <div class="card-body">
-                                <div id="piechart"></div>
+                                <canvas id="piechart"></canvas>
                         </div> 
                 </div>
             </div>
