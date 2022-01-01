@@ -22,22 +22,25 @@ include("gettran.php");
         google.charts.load('current',{'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart(){
-            <?php
-                while($piechart = mysqli_fetch_assoc($output))
+        function drawChart()
+        {
+            var data = google.visualization.arrayToDataTable([
+                ['category', 'Total'],
+                <?php
+                while($row = mysqli_fetch_array($output))
                 {
-                    echo "['".$piechart['category']."',".$piechart['Total']."],";
+                    echo "['".$row["category"]."',".$row["Total"]."],";
                 }
-            ?>
-
-            var mytitle = {
-                title: 'my chart;
-            };
-
-            var chart = new google.visualization.Piechart(document.getElementById('piechart'));
-
-            chart.draw(data, mytitle);
+                ?>
+            ]);
+            var options:{
+                title:'My Finance'
+            }
+            car chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.dar(data, options);
         }
+
+        
             </script>
 
 </head>
