@@ -34,9 +34,9 @@ include("gettran.php");
                           ?>  
                      ]);  
                 var style = {
-                    width: 100%;
+                    width: '100%',
                     height: '500px'
-                }
+                };
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
                 chart.draw(data, style);  
            }  
