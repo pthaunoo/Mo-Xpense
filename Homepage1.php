@@ -79,7 +79,7 @@ include("gettran.php");
                 <div class="col-sm-6 banner-info">
                         <h2 class="big-text">Expenses</h2>
                         <div class="card-body">
-                                <div id="piechart" class="embed-responsive"></div>
+                                <div id="piechart" class="img-responsive"></div>
                         </div> 
                 </div>
             </div>
