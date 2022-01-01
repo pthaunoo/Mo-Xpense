@@ -26,7 +26,7 @@ $output = mysqli_query($con, $query);
             var options:{
                 title:'My Finance'
             }
-            car chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);
         }
 
