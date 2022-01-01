@@ -130,12 +130,12 @@ a.btn:hover{
     transition: 0.3s;
 }
 
-.hidebtn{
+.box .hidebtn{
     display: none;
 }
 
 
-.l_radio{
+.box .l_radio{
     text-align: center;
     box-shadow: 0px 4px 30px -4px rgba(0, 0, 0, 0.35);
     padding: 20px;
