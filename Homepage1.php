@@ -78,10 +78,10 @@ include("gettran.php");
                 <div class="col-sm-offset-3">
                     <input type="radio" name="description" value="1" required/> Salary
                     <input type="radio" name="description" value="2" required/> Food
-                    <input type="radio" name="description" value="3" required/> Beverage
+                    <input type="radio" name="description" value="3" required/> Beverage<br><br>
                     <input type="radio" name="description" value="4" required/> Clothing
-                    <input type="radio" name="description" value="5" required/> Fuel<br>
-                    <input type="radio" name="description" value="6" required/> Entertainment
+                    <input type="radio" name="description" value="5" required/> Fuel
+                    <input type="radio" name="description" value="6" required/> Entertainment<br><br>
                     <input type="radio" name="description" value="7" required/> Medical
                     <input type="radio" name="description" value="8" required/> Debt
                     <input type="radio" name="description" value="2" required/> Others<p>
