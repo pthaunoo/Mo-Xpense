@@ -85,7 +85,7 @@ include("gettran.php");
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         <div class="container-fluid">
-            <div class="col">
+            <div class="row">
                 <div class="col-sm-6 banner-info">
                         <h2 class="big-text">Expenses</h2>
                         <div class="card-body">
