@@ -66,7 +66,7 @@ include("gettran.php");
     </nav>
 <div class="container">
     <div class="row">
-        <div class="col-sm-8 banner-info">
+        <div class="col-sm-10 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text1">Transactions</h2>
                     <input type="radio" name="cat_id" value="6" required/> Income
