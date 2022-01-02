@@ -70,7 +70,7 @@ include("gettran.php");
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text1">Transactions</h2>
                 <div class="col-sm-offset-3">
-                    <h3 class="header1">Please Capture Transaction Type</h3>
+                    <h2 class="big-text2">Please Capture Transaction Type</h2>
                 </div>
                 <div class="col-sm-offset-5">
                     <input type="radio" name="cat_id" value="6" required/> Income
