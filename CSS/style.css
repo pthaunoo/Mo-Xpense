@@ -33,6 +33,12 @@ li a:hover{
     margin: 20px 0;
     color: darkorange;
 }
+
+.header1{
+    font-size: 30px;
+    margin: 20px 0;
+    color: darkgrey;
+}
 .para-text{
     font-size: 20px;
     margin: 20px 0;
