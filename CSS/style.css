@@ -152,11 +152,3 @@ a.btn:hover{
     height: 0;
     overflow: visible;
 }
-
-.piechart{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 400%;
-    height: 500%;
-}
