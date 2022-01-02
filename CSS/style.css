@@ -82,6 +82,22 @@ a.btn:hover{
     transition: 0.25px;
     
     }
+
+.box input[type="integer"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid darkorange;
+    padding: 14px 10px;
+    width: 400px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25px;
+    
+    }
     
 .box input[type="password"] {
     border: 0;
