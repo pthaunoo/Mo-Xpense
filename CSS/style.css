@@ -94,8 +94,8 @@ a.btn:hover{
     border: 0;
     background: none;
     display:flex;
-    margin: 1px;
-    text-align: right;
+    margin: 1px auto;
+    text-align: left;
     padding: 2px;
     outline: none;
     color: black;
