@@ -87,7 +87,7 @@ include("gettran.php");
         </div>
         <div class="col-sm-6 banner-image">
             <h2 class="big-text1">Analytics</h2>
-             <div id="piechart"></div>
+             <div id="piechart" class="piechart"></div>
         </div>
 </body>  
 </html>
