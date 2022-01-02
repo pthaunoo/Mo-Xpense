@@ -83,7 +83,7 @@ a.btn:hover{
     
     }
 
-.box input[type="integer"]{
+.box input[type="date"]{
     border: 0;
     background: none;
     display: block;
