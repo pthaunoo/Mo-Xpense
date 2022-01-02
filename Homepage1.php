@@ -34,7 +34,7 @@ include("gettran.php");
                           ?>  
                      ]);  
                 var style = {
-                    width: '500%',
+                    width: '100%',
                     height: '500px'
                 };
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
@@ -85,7 +85,7 @@ include("gettran.php");
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
-        <div class="col-sm-6 banner-image">
+        <div class="col-sm-6 banner-info">
             <h2 class="big-text1">Analytics</h2>
              <div id="piechart" class="piechart"></div>
         </div>
