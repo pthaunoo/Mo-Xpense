@@ -154,7 +154,7 @@ a.btn:hover{
 }
 
 .piechart{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 400%;
