@@ -99,7 +99,7 @@ a.btn:hover{
     transition: 0.25px;
     
     }    
-.box input[type="text"]:focus,.box input[type="password"]:focus{
+.box input[type="text"]:focus,.box input[type="password"]:focus, .box input[type=date]:focus{
     width: 400px;
     border-color: #0cdf5dec;
 
@@ -132,9 +132,11 @@ a.btn:hover{
 }
 
 .box input[type=date]{
-    border: none;
+    border: 0;
     background: none;
+    display: block;
     margin: 20px auto;
+    text-align: center;
     border: 3px solid darkorange;
     padding: 14px 10px;
     width: 400px;
