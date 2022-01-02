@@ -71,9 +71,9 @@ include("gettran.php");
                 <h2 class="big-text">Transactions</h2>
                     <input type="radio" name="cat_id" value="6" required/> Income
                     <input type="radio" name="cat_id" value="7" required/> Expense<p>
-				    <input type="integer" placeholder="Amount" name="amount" required><p>
+				    <input type="text" placeholder="Amount" name="amount" required><p>
 				    <input type="date" placeholder="Please capture date" name="date" required><p>
-				    <input type="integer" placeholder="Description" name="description" required><p>
+				    <input type="text" placeholder="Description" name="description" required><p>
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
