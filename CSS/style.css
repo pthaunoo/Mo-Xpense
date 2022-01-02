@@ -55,7 +55,7 @@ a.btn:hover{
     transition: 0.3s;
 }
 .banner-info, .banner-image{
-    margin: 30px 0;
+    margin: 30px 100px;
 }
 .box h1{
     color: white;
