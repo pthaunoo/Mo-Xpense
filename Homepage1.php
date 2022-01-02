@@ -69,7 +69,7 @@ include("gettran.php");
         <div class="col-sm-6 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text1">Transactions</h2>
-                <div class="col-sm-offset-2">
+                <div class="col-sm-offset-3">
                     <h3 class="header1">Please Capture Transaction Type</h3>
                 </div>
                 <div class="col-sm-offset-5">
