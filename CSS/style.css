@@ -99,7 +99,7 @@ a.btn:hover{
     transition: 0.25px;
     
     }    
-.box input[type="text"]:focus,.box input[type="password"]:focus, .box input[type=date]:focus{
+.box input[type="text"]:focus,.box input[type="password"]:focus{
     width: 400px;
     border-color: #0cdf5dec;
 
