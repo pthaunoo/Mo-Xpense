@@ -85,7 +85,7 @@ include("gettran.php");
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 banner-image">
                         <div class="chart_style">
                                 <div id="piechart" class="piechart"></div>
                         </div> 
