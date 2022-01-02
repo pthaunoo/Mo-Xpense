@@ -94,10 +94,9 @@ a.btn:hover{
     border: 0;
     background: none;
     display: block;
-    margin: 5px auto;
+    margin: 1px auto;
     text-align: center;
-    padding: 2px 2px;
-    width: 10px;
+    padding: 2px;
     outline: none;
     color: black;
     
