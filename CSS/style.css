@@ -93,7 +93,7 @@ a.btn:hover{
 .box input[type="radio"]{
     border: 0;
     background: none;
-    display:contents;
+    display:flex;
     margin: 1px auto;
     text-align: center;
     padding: 2px;
