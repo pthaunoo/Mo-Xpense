@@ -148,14 +148,14 @@ a.btn:hover{
     }
 
 .chart_style{
-    position: fixed;
+    position: absolute;
     padding-bottom: 10%;
     height: 0;
     overflow: visible;
 }
 
 .piechart{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
