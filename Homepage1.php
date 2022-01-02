@@ -75,7 +75,7 @@ include("gettran.php");
                 </div>            
 				    <input type="text" placeholder="Amount" name="amount" required><p>
                     <input type="date" placeholder="Date"  name="date" required><p>
-                <div class="col-sm-offset-3">
+                <div class="col-sm-offset-4">
                     <input type="radio" name="description" value="1" required/> Salary
                     <input type="radio" name="description" value="2" required/> Food
                     <input type="radio" name="description" value="3" required/> Beverage<br><br>
