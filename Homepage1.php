@@ -72,7 +72,7 @@ include("gettran.php");
                     <input type="radio" name="cat_id" value="6" required/> Income
                     <input type="radio" name="cat_id" value="7" required/> Expense<p>
 				    <input type="text" placeholder="Amount" name="amount" required><p>
-                    <input type="date"  name="date" required><p>
+                    <input type="date" placeholder="Date"  name="date" required><p>
                     <input type="radio" name="description" value="1" required/> Salary
                     <input type="radio" name="description" value="2" required/> Food<p>
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
