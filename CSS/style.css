@@ -132,7 +132,7 @@ a.btn:hover{
 
 .chart_style{
     position: relative;
-    padding-bottom: 100%;
+    padding-bottom: 50%;
     height: 0;
     overflow: hidden;
 }

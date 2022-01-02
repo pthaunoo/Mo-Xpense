@@ -69,27 +69,12 @@ include("gettran.php");
         <div class="col-sm-6 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text">Transactions</h2>
-                    <input type="radio" name="cat_id" value="6" id="1" required >
-                    <label for="1" class="lbl-radio">
-                        <div class = "display-box">
-                            <div class="size">Income</div>
-                        </div>
-                    </label>   
-                    <input type="radio" name="cat_id" value="6" id = "2"  required>
-                    <label for="2" class="lbl-radio">
-                        <div class = "display-box">
-                            <div class="size">Expense</div>
-                        </div>
-                    </label>  
-                    <br>
-
+                    <input type="radio" name="cat_id" value="6" required/> Income
+                    <input type="radio" name="cat_id" value="7" required/> Expense<p>
 				    <input type="integer" placeholder="Amount" name="amount" required><p>
-                    <br>
 				    <input type="date" placeholder="Please capture date" name="date" required><p>
-                    <br>
 				    <input type="integer" placeholder="Description" name="description" required><p>
-                    <br>
-                <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
+                    <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
         <div class="container-fluid">
