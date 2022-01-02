@@ -147,8 +147,16 @@ a.btn:hover{
     }
 
 .chart_style{
-    position: relative;
+    position: fixed;
     padding-bottom: 10%;
     height: 0;
     overflow: visible;
+}
+
+.piechart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 500%;
 }
