@@ -153,13 +153,6 @@ a.btn:hover{
     transition: 0.25px;
     }
 
-.chart_style{
-    position: absolute;
-    padding-bottom: 10%;
-    height: 0;
-    overflow: visible;
-}
-
 .piechart{
     position: absolute;
     top: 100;

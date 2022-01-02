@@ -34,7 +34,7 @@ include("gettran.php");
                           ?>  
                      ]);  
                 var style = {
-                    width: '200%',
+                    width: '500%',
                     height: '500px'
                 };
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
