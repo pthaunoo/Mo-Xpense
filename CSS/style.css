@@ -84,11 +84,12 @@ a.btn:hover{
     }
 
 .box input[type=date]{
-    border: 0;
-    background: none;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    border: 3px solid darkorange;
+    width: 95%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
 
     
     }
