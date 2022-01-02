@@ -69,13 +69,13 @@ include("gettran.php");
         <div class="col-sm-6 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text">Transactions</h2>
-                    <input type="radio" name="cat_id" value="6" id="1" class="hidebtn" required >
+                    <input type="radio" name="cat_id" value="6" id="1" required >
                     <label for="1" class="lbl-radio">
                         <div class = "display-box">
                             <div class="size">Income</div>
                         </div>
                     </label>   
-                    <input type="radio" name="cat_id" value="6" id = "2" class="hidebtn" required>
+                    <input type="radio" name="cat_id" value="6" id = "2"  required>
                     <label for="2" class="lbl-radio">
                         <div class = "display-box">
                             <div class="size">Expense</div>
