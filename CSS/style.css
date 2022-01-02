@@ -130,9 +130,6 @@ a.btn:hover{
     transition: 0.3s;
 }
 
-.box .hidebtn{
-    display: none;
-}
 
 
 .box input[type="radio"]{
@@ -145,7 +142,7 @@ a.btn:hover{
 
 }
 
-.display-box .size{
+.box .display-box .size{
  font-weight: 600;
  margin-bottom: 5px;
  letter-spacing: 0.5px;
