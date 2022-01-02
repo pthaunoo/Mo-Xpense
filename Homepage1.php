@@ -86,7 +86,7 @@ include("gettran.php");
         </form>
         <div class="container-fluid">
             <div class="col">
-                <div class="col-sm-6 m-auto">
+                <div class="col-sm-6 banner-image">
                         <h2 class="big-text">Expenses</h2>
                         <div class="card-body">
                                 <div id="piechart"></div>
