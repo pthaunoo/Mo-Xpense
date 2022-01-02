@@ -80,7 +80,7 @@ include("gettran.php");
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-9 m-auto">
+                <div class="col-sm-6 banner-info">
                         <h2 class="big-text">Expenses</h2>
                         <div class="chart_style">
                                 <div id="piechart" class="piechart"></div>
