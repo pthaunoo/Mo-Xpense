@@ -79,13 +79,13 @@ include("gettran.php");
         </form>
         </div>
         <div class="container-fluid">
-            <div class="row">
-         
+            <div class="col">
+               // <div class="col-sm-10 banner-info">
                         <h2 class="big-text">Expenses</h2>
                         <div class="chart_style">
                                 <div id="piechart" class="piechart"></div>
                         </div> 
-                
+                </div>
             </div>
 </body>  
 </html>
