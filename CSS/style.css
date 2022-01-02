@@ -67,7 +67,7 @@ a.btn:hover{
     text-align: center;
     font-weight: 700;
     }
-.box input[type="text"]{
+.box input[type="text"], .box input[type="date"]{
     border: 0;
     background: none;
     display: block;
@@ -80,17 +80,6 @@ a.btn:hover{
     color: black;
     border-radius: 24px;
     transition: 0.25px;
-    
-    }
-
-.box input[type=date]{
-    width: 95%;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-
     
     }
     
