@@ -84,8 +84,11 @@ include("gettran.php");
                     <br>
 
 				    <input type="integer" placeholder="Amount" name="amount" required><p>
+                    <br>
 				    <input type="date" placeholder="Please capture date" name="date" required><p>
+                    <br>
 				    <input type="integer" placeholder="Description" name="description" required><p>
+                    <br>
                 <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
         </form>
         </div>
