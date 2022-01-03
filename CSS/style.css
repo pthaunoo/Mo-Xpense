@@ -183,19 +183,6 @@ table {
     
 
 }
-table1 {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    align-items: center;
-    align-content: center;
-    min-width: 300px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px #999;
-    
-
-}
 
 td, th {
     border: 1px solid darkorange;
