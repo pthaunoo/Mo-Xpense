@@ -183,14 +183,14 @@ table {
 }
 
 td, th {
-    border: 1px solid #00adb5;
+    border: 1px solid darkorange;
     text-align: left;
     padding: 10px;
 
 }
 
-tr {
-    background-color: #009879;
+tr:nth-child(even) {
+    background-color: lightgrey;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
