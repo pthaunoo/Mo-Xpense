@@ -8,7 +8,7 @@ $query = "SELECT tran1.date as 'date', ref.cat_desc as category, tdesc.descripti
         on tran1.cat_id = ref.cat_id
         inner join tran_description as tdesc
         on tran1.desc_id = tdesc.desc_id
-        where tran1.username = 'Praveen'
+        where tran1.username = '$user'
         ORDER BY date ASC
 		";
 $output = mysqli_query($con, $query);

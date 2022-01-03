@@ -92,6 +92,8 @@ include("gettran.php");
                     <br>
             </form>
             <div class="col-sm-offset-3">
+                <form action="Transaction.php" method="POST">
+                    
                 <?php
                     include("transactions.php");
                     if (mysqli_num_rows($output) > 0) {
