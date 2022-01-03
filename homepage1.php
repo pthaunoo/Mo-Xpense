@@ -37,7 +37,7 @@ include("gettran.php");
                     width: '100%',
                     height: '500px'
                 };
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
+                var chart = new google.visualization.PieChart(document.getElementById('table'));  
                 chart.draw(data, style);  
            }  
            </script>  
@@ -93,7 +93,7 @@ include("gettran.php");
             <div class="row">
             <div class="col-sm-6 banner-chart">    
             <h2 class="big-text1">Analytics</h2>
-            <div id="piechart" class="piechart"></div>
+            <div id="table" "></div>
         </div>
 
 </body>  
