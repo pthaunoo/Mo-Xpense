@@ -29,7 +29,7 @@ include("gettran.php");
                           <?php  
                           while($row = mysqli_fetch_array($output))  
                           {  
-                               echo <td>".$row['category']."</td>
+                               echo "<td>".$row['category']."</td>
                                <td>".$row['total']."</td> 
                 
                           }  
