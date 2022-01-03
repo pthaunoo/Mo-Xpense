@@ -75,15 +75,15 @@ include("gettran.php");
                 </div>            
 				    <input type="text" placeholder="Amount" name="amount" required><p>
                     <input type="date" placeholder="Date"  name="date" required><p>
-                <div class="col-sm-offset-3">
+                <div class="col-sm-offset-4">
                     <input type="radio" name="description" value="1" required/> Salary
                     <input type="radio" name="description" value="2" required/> Food
                     <input type="radio" name="description" value="3" required/> Beverage
-                    <input type="radio" name="description" value="4" required/> Clothing<br><br>
-                    <input type="radio" name="description" value="5" required/> Fuel
+                    <input type="radio" name="description" value="4" required/> Clothing
+                    <input type="radio" name="description" value="5" required/> Fuel<br><br>
                     <input type="radio" name="description" value="6" required/> Entertainment
                     <input type="radio" name="description" value="7" required/> Medical
-                    <input type="radio" name="description" value="8" required/> Debt<br><br>
+                    <input type="radio" name="description" value="8" required/> Debt
                     <input type="radio" name="description" value="9" required/> Others<p>
                 </div>
                     <input type="submit" name="add_tran" class="button-submit" value="Add">
