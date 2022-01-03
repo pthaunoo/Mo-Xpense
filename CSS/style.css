@@ -176,7 +176,7 @@ table {
     font-size: 0.9em;
     align-items: center;
     align-content: center;
-    min-width: 300px;
+    min-width: auto;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 5px 5px 10px #999;
