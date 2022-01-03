@@ -88,12 +88,6 @@ include("gettran.php");
                 </div>
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
             </form>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-            <div class="col-sm-6 banner-chart">    
-            <h2 class="big-text1">Analytics</h2>
-            <div id="piechart" class="piechart"></div>
             <?php
 				
 				include("connection.php");
@@ -122,6 +116,12 @@ include("gettran.php");
 				mysqli_close($con);
 			
 				?>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-6 banner-chart">    
+            <h2 class="big-text1">Analytics</h2>
+            <div id="piechart" class="piechart"></div>
         </div>
 
 </body>  
