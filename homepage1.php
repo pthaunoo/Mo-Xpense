@@ -132,7 +132,6 @@ include("gettran.php");
                 <?php                
                 include("connection.php");
                 include("gettran.php");
-                $user = $_SESSION['username'];
                     if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=2 align='center'>";
