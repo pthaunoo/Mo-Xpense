@@ -13,7 +13,7 @@ include("connection.php");
             mysqli_query($con, $add_tran);
            
         if ($add_tran) {
-            header('location: Homepage1.php');
+            header('location: Homepage.php');
             die;
         }
     }

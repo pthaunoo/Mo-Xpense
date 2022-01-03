@@ -19,28 +19,7 @@ include("gettran.php");
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
-           <script type="text/javascript">  
-           google.charts.load('current', {'packages':['corechart']});  
-           google.charts.setOnLoadCallback(drawChart);  
-           function drawChart()  
-           {  
-                var data = google.visualization.arrayToDataTable([  
-                          ['category', 'total'],  
-                          <?php  
-                          while($row = mysqli_fetch_array($output))  
-                          {  
-                               echo "['".$row["category"]."', ".$row["total"]."],";  
-                          }  
-                          ?>  
-                     ]);  
-                var style = {
-                    width: '100%',
-                    height: '500px'
-                };
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
-                chart.draw(data, style);  
-           }  
-           </script>  
+           <script type="text/javascript" src="/JS/chart.js"> </script>  
 
 </head>
 <body>  
