@@ -90,34 +90,36 @@ include("gettran.php");
                     <br>
                     <br>
             </form>
-            <?php
-				
-				include("connection.php");
-				$result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$user' ORDER BY date ASC");
-			
-				if (mysqli_num_rows($result) > 0) {
-				// output data of each row
-					echo "<table border=1 align='center'>";
-					echo "<tr>
-		             	<th>date</th>
-		             	<th>cat_id</th>
-		             	<th>amount</th>
-		             	<th>desc_id</th>";
-					while($row = mysqli_fetch_assoc($result)) {
-						echo "<tr>";
-						echo 
-							"<td>".$row['date']."</td>
-							<td>".$row['cat_id']."</td>
-							<td>".$row['amount']."</td>
-							<td>".$row['desc_id']."</td>";
-					}
-					echo "</table>";
-				} else {
-					echo "<h3 align='center'>No Results</h3>";
-				}
-				mysqli_close($con);
-			
-				?>
+            <div class="col-sm-offset-6">
+                <?php
+                    
+                    include("connection.php");
+                    $result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$user' ORDER BY date ASC");
+                
+                    if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                        echo "<table border=1 align='center'>";
+                        echo "<tr>
+                            <th>date</th>
+                            <th>cat_id</th>
+                            <th>amount</th>
+                            <th>desc_id</th>";
+                        while($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo 
+                                "<td>".$row['date']."</td>
+                                <td>".$row['cat_id']."</td>
+                                <td>".$row['amount']."</td>
+                                <td>".$row['desc_id']."</td>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<h3 align='center'>No Results</h3>";
+                    }
+                    mysqli_close($con);
+                
+                    ?>
+                </div> 
         </div>
         <div class="container-fluid">
             <div class="row">
