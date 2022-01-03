@@ -92,11 +92,7 @@ include("gettran.php");
             </form>
             <div class="col-sm-offset-3">
                 <?php
-                    
-                    include("connection.php");
-                    include("fulltran.php");
-                    $user = $_SESSION['username'];
-                
+                    include("transactions.php");
                     if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=1 align='center'>";
@@ -130,7 +126,6 @@ include("gettran.php");
                 </div>
             <div class="col-sm-offset-2">
                 <?php                
-                include("connection.php");
                 include("gettran.php");
                     if (mysqli_num_rows($output) > 0) {
                     // output data of each row
