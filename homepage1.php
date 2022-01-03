@@ -127,35 +127,37 @@ include("gettran.php");
             <h2 class="big-text1">Analytics</h2>
                 <div id="piechart" class="piechart">
                 </div>
-            <?php
+            <div class="col-sm-offset-4">
+                <?php
 				
-				include("connection.php");
-				$result = mysqli_query($con,"SELECT ref.cat_desc as category, sum(tran1.amount) AS total 
-                FROM transactions as tran1
-                inner join tran_category as ref
-                on tran1.cat_id = ref.cat_id
-                where tran1.username = '$user'
-                GROUP BY category");
-			
-				if (mysqli_num_rows($result) > 0) {
-				// output data of each row
-					echo "<table border=2 align='center'>";
-					echo "<tr>
-		             	<th>category</th>
-		             	<th>total</th>";   
-					while($row = mysqli_fetch_assoc($result)) {
-						echo "<tr>";
-						echo 
-							"<td>".$row['category']."</td>
-							<td>".$row['total']."</td>";
-					}
-					echo "</table>";
-				} else {
-					echo "<h3 align='center'>No Results</h3>";
-				}
-				mysqli_close($con);
+                    include("connection.php");
+                    $result = mysqli_query($con,"SELECT ref.cat_desc as category, sum(tran1.amount) AS total 
+                    FROM transactions as tran1
+                    inner join tran_category as ref
+                    on tran1.cat_id = ref.cat_id
+                    where tran1.username = '$user'
+                    GROUP BY category");
+                
+                    if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                        echo "<table border=2 align='center'>";
+                        echo "<tr>
+                            <th>category</th>
+                            <th>total</th>";   
+                        while($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo 
+                                "<td>".$row['category']."</td>
+                                <td>".$row['total']."</td>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<h3 align='center'>No Results</h3>";
+                    }
+                    mysqli_close($con);
 			
 				?>
+            </div>
             </div>
         </div>
 
