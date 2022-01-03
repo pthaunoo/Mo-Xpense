@@ -87,6 +87,8 @@ include("gettran.php");
                     <input type="radio" name="description" value="9" required/> Others<p>
                 </div>
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
+                    <br>
+                    <br>
             </form>
             <?php
 				
