@@ -175,7 +175,7 @@ table {
     margin: 25px 0;
     font-size: 0.9em;
     align-items: center;
-    align-content: center;
+    align-content: left;
     min-width: 50%;
     border-radius: 5px;
     overflow: hidden;
