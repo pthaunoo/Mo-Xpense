@@ -128,7 +128,9 @@ include("gettran.php");
                 <div id="piechart" class="piechart">
                 </div>
             <div class="col-sm-offset-2">
-                <?php                
+                <?php      
+                include("connection.php");
+                include("gettran.php");          
                     if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=2 align='center'>";
