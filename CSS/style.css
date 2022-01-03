@@ -191,14 +191,14 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: dimgray;
+    background-color: lightgrey;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
 }
 
 tr:nth-child(odd) {
-    background-color: lightgrey;
+    background-color: gray;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
