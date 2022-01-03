@@ -128,16 +128,7 @@ include("gettran.php");
                 <div id="piechart" class="piechart">
                 </div>
             <div class="col-sm-offset-2">
-                <?php
-				
-                    include("connection.php");
-                    $result = mysqli_query($con,"SELECT ref.cat_desc as category, sum(tran1.amount) AS total 
-                    FROM transactions as tran1
-                    inner join tran_category as ref
-                    on tran1.cat_id = ref.cat_id
-                    where tran1.username = '$user'
-                    GROUP BY category");
-                
+                <?php                
                     if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                         echo "<table border=2 align='center'>";
