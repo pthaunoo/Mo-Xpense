@@ -134,7 +134,7 @@ include("gettran.php");
 			
 				if (mysqli_num_rows($result) > 0) {
 				// output data of each row
-					echo "<table>";
+					echo "<table border=2 align='center'>";
 					echo "<tr>
 		             	<th>category</th>
 		             	<th>total</th>";   
