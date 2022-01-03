@@ -16,7 +16,7 @@ $email    = "";
         $user_query = "SELECT * FROM Users WHERE username = '$username' OR email='$email'";
         $output = mysqli_query($con, $user_query);
         if (mysqli_num_rows($output) > 0) {
-            header('location: Login.html');
+            header('location: userexist.html');
             die;
         } else {
             $add_query = "INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, USERNAME, PASSWORD) VALUES ('$first_name','$last_name','$email','$username', '$password')";
