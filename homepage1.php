@@ -126,7 +126,7 @@ include("gettran.php");
                 </div>
             <div class="col-sm-offset-2">
                 <?php                
-                include("gettran.php");
+                    include("gettran.php");
                     if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=2 align='center'>";
