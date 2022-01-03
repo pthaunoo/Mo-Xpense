@@ -18,7 +18,7 @@ $password    = "";
                     die;
                 }
                 else {
-                        header('location: Index.html');
+                        header('location: usernotexist.html');
                         die;
                 }
 
