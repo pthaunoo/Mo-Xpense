@@ -129,7 +129,7 @@ include("gettran.php");
                 </div>
             <div class="col-sm-offset-2">
                 <?php                
-                    if (mysqli_num_rows($result) > 0) {
+                    if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=2 align='center'>";
                         echo "<tr>
@@ -145,8 +145,6 @@ include("gettran.php");
                     } else {
                         echo "<h3 align='center'>No Results</h3>";
                     }
-                    mysqli_close($con);
-			
 				?>
             </div>
             </div>
