@@ -96,7 +96,7 @@ include("gettran.php");
             <div id="piechart" class="piechart"></div>
             <?php
 				
-				include("dbconnect.php");
+				include("connection.php");
 				$result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$name' ORDER BY date ASC");
 			
 				if (mysqli_num_rows($result) > 0) {
