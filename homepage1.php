@@ -29,9 +29,7 @@ include("gettran.php");
                           <?php  
                           while($row = mysqli_fetch_array($output))  
                           {  
-                               echo "<td>".$row['category']."</td>
-                               <td>".$row['total']."</td>"; 
-                
+                               echo "['".$row["category"]."', ".$row["total"]."],";  
                           }  
                           ?>  
                      ]);  
@@ -39,7 +37,7 @@ include("gettran.php");
                     width: '100%',
                     height: '500px'
                 };
-                var chart = new google.visualization.Table(document.getElementById('table'));  
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
                 chart.draw(data, style);  
            }  
            </script>  
@@ -95,7 +93,35 @@ include("gettran.php");
             <div class="row">
             <div class="col-sm-6 banner-chart">    
             <h2 class="big-text1">Analytics</h2>
-            <div id="table" "></div>
+            <div id="piechart" class="piechart"></div>
+            <?php
+				
+				include("dbconnect.php");
+				$result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$name' ORDER BY date ASC");
+			
+				if (mysqli_num_rows($result) > 0) {
+				// output data of each row
+					echo "<table border=1 align='center'>";
+					echo "<tr>
+		             	<th>date</th>
+		             	<th>cat_id</th>
+		             	<th>amount</th>
+		             	<th>desc_id</th>";
+					while($row = mysqli_fetch_assoc($result)) {
+						echo "<tr>";
+						echo 
+							"<td>".$row['date']."</td>
+							<td>".$row['cat_id']."</td>
+							<td>".$row['amount']."</td>
+							<td>".$row['desc_id']."</td>";
+					}
+					echo "</table>";
+				} else {
+					echo "<h3 align='center'>No Results</h3>";
+				}
+				mysqli_close($con);
+			
+				?>
         </div>
 
 </body>  
