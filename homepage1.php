@@ -127,7 +127,7 @@ include("gettran.php");
             <h2 class="big-text1">Analytics</h2>
                 <div id="piechart" class="piechart">
                 </div>
-            <div class="col-sm-offset-4">
+            <div class="col-sm-offset-6">
                 <?php
 				
                     include("connection.php");
