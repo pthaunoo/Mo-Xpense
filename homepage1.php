@@ -69,7 +69,7 @@ include("gettran.php");
         <div class="col-sm-6 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text1">Transactions</h2>
-                <div class="col-sm-offset-4">
+                <div class="col-sm-offset-5">
                     <input type="radio" name="cat_id" value="6" required/> Income
                     <input type="radio" name="cat_id" value="7" required/> Expense<p>
                 </div>            
@@ -90,7 +90,7 @@ include("gettran.php");
                     <br>
                     <br>
             </form>
-            <div class="col-sm-offset-6">
+            <div class="col-sm-offset-5">
                 <?php
                     
                     include("connection.php");
