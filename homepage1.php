@@ -39,7 +39,7 @@ include("gettran.php");
                     width: '100%',
                     height: '500px'
                 };
-                var chart = new google.visualization.PieChart(document.getElementById('table'));  
+                var chart = new google.visualization.Table(document.getElementById('table'));  
                 chart.draw(data, style);  
            }  
            </script>  
