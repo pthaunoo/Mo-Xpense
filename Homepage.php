@@ -19,6 +19,7 @@ include("gettran.php");
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
+    <!--script for piechart -->
            <script type="text/javascript">  
            google.charts.load('current', {'packages':['corechart']});  
            google.charts.setOnLoadCallback(drawChart);  
@@ -44,6 +45,7 @@ include("gettran.php");
 
 </head>
 <body>  
+    <!-- navitation bar -->
 <header class="header">
     <nav class="navbar navbar-style">
         <div class="container">
@@ -64,12 +66,13 @@ include("gettran.php");
         </div> 
         </div>
     </nav>
+    <!-- form for input transaction -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6 banner-info">
             <form class="box" action="Transaction.php" method="POST" onsubmit="return validate()">
                 <h2 class="big-text1">Transactions</h2>
-                <div class="col-sm-offset-6">
+                <div class="col-sm-offset-5">
                     <input type="radio" name="cat_id" value="6" required/> Income
                     <input type="radio" name="cat_id" value="7" required/> Expense<p>
                 </div>            
@@ -78,23 +81,77 @@ include("gettran.php");
                 <div class="col-sm-offset-4">
                     <input type="radio" name="description" value="1" required/> Salary
                     <input type="radio" name="description" value="2" required/> Food
-                    <input type="radio" name="description" value="3" required/> Beverage<br><br>
+                    <input type="radio" name="description" value="3" required/> Beverage
                     <input type="radio" name="description" value="4" required/> Clothing
-                    <input type="radio" name="description" value="5" required/> Fuel
-                    <input type="radio" name="description" value="6" required/> Entertainment<br><br>
+                    <input type="radio" name="description" value="5" required/> Fuel<br><br>
+                    <input type="radio" name="description" value="6" required/> Entertainment
                     <input type="radio" name="description" value="7" required/> Medical
                     <input type="radio" name="description" value="8" required/> Debt
                     <input type="radio" name="description" value="9" required/> Others<p>
                 </div>
-                    <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
+                <br>
+                    <input type="submit" name="add_tran" class="button-submit" value="Add">
+                    <br>
+                    <br>
             </form>
+            <!-- all transactions table -->
+            <div class="col-sm-offset-3">
+                <?php
+                    include("transactions.php");
+                    if (mysqli_num_rows($output) > 0) {
+                    // output data of each row
+                        echo "<table border=1 align='center'>";
+                        echo "<tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>";
+                        while($row = mysqli_fetch_assoc($output)) {
+                            echo "<tr>";
+                            echo 
+                                "<td>".$row['date']."</td>
+                                <td>".$row['category']."</td>
+                                <td>".$row['description']."</td>
+                                <td>".$row['amount']."</td>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<h3 align='center'>No Results</h3>";
+                    }
+                    mysqli_close($con);
+                    ?>   
+            </div> 
         </div>
         <div class="container-fluid">
             <div class="row">
+                <!-- display pie chart -->
             <div class="col-sm-6 banner-chart">    
             <h2 class="big-text1">Analytics</h2>
-            <div id="piechart" class="piechart"></div>
+                <div id="piechart" class="piechart">
+                </div>
+            <div class="col-sm-offset-2">
+                <!-- summary table -->
+                <?php                
+                    include("gettran.php");
+                    if (mysqli_num_rows($output) > 0) {
+                    // output data of each row
+                        echo "<table border=2 align='center'>";
+                        echo "<tr>
+                            <th>category</th>
+                            <th>total</th>";   
+                        while($row = mysqli_fetch_assoc($output)) {
+                            echo "<tr>";
+                            echo 
+                                "<td>".$row['category']."</td>
+                                <td>".$row['total']."</td>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<h3 align='center'>No Results</h3>";
+                    }
+				?>
+            </div>
         </div>
-
+    </div>
 </body>  
 </html>
