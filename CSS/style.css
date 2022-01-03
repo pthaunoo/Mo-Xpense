@@ -175,9 +175,9 @@ table {
     margin: 25px 0;
     font-size: 0.9em;
     min-width: 400px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0,0.15);
+    box-shadow: 5px 5px 10px #999;
     
 
 }
@@ -190,7 +190,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: darkorange;
+    background-color: lightcoral;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
