@@ -128,16 +128,16 @@ include("gettran.php");
                 <div id="piechart" class="piechart">
                 </div>
             <div class="col-sm-offset-2">
-                <?php      
+                <?php                
                 include("connection.php");
-                include("gettran.php");          
+                include("gettran.php");
                     if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=2 align='center'>";
                         echo "<tr>
                             <th>category</th>
                             <th>total</th>";   
-                        while($row = mysqli_fetch_assoc($result)) {
+                        while($row = mysqli_fetch_assoc($output)) {
                             echo "<tr>";
                             echo 
                                 "<td>".$row['category']."</td>
