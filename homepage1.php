@@ -97,7 +97,7 @@ include("gettran.php");
             <?php
 				
 				include("connection.php");
-				$result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$name' ORDER BY date ASC");
+				$result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$user' ORDER BY date ASC");
 			
 				if (mysqli_num_rows($result) > 0) {
 				// output data of each row
