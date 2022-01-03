@@ -90,7 +90,7 @@ include("gettran.php");
                     <br>
                     <br>
             </form>
-            <div class="col-sm-offset-5">
+            <div class="col-sm-offset-3">
                 <?php
                     
                     include("connection.php");
