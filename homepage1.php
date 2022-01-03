@@ -115,9 +115,8 @@ include("gettran.php");
                         echo "<h3 align='center'>No Results</h3>";
                     }
                     mysqli_close($con);
-                
-                    ?>
-                </div> 
+                    ?>   
+            </div> 
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -146,8 +145,7 @@ include("gettran.php");
                     }
 				?>
             </div>
-            </div>
         </div>
-
+    </div>
 </body>  
 </html>
