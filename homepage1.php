@@ -86,7 +86,7 @@ include("gettran.php");
                     <input type="radio" name="description" value="8" required/> Debt
                     <input type="radio" name="description" value="9" required/> Others<p>
                 </div>
-                    <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
+                    <input type="submit" name="add_tran" class="button-submit" value="Add">
                     <br>
                     <br>
             </form>
@@ -123,7 +123,8 @@ include("gettran.php");
             <div class="row">
             <div class="col-sm-6 banner-chart">    
             <h2 class="big-text1">Analytics</h2>
-            <div id="piechart" class="piechart"></div>
+                <div id="piechart" class="piechart">
+                </div>
             <?php
 				
 				include("connection.php");
@@ -153,6 +154,7 @@ include("gettran.php");
 				mysqli_close($con);
 			
 				?>
+            </div>
         </div>
 
 </body>  
