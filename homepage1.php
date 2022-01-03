@@ -94,23 +94,23 @@ include("gettran.php");
                 <?php
                     
                     include("connection.php");
-                    $result = mysqli_query($con,"SELECT * FROM transactions WHERE username= '$user' ORDER BY date ASC");
+                    include("fulltran.php");
                 
-                    if (mysqli_num_rows($result) > 0) {
+                    if (mysqli_num_rows($output) > 0) {
                     // output data of each row
                         echo "<table border=1 align='center'>";
                         echo "<tr>
-                            <th>date</th>
-                            <th>cat_id</th>
-                            <th>amount</th>
-                            <th>desc_id</th>";
-                        while($row = mysqli_fetch_assoc($result)) {
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>";
+                        while($row = mysqli_fetch_assoc($output)) {
                             echo "<tr>";
                             echo 
                                 "<td>".$row['date']."</td>
-                                <td>".$row['cat_id']."</td>
-                                <td>".$row['amount']."</td>
-                                <td>".$row['desc_id']."</td>";
+                                <td>".$row['category']."</td>
+                                <td>".$row['description']."</td>
+                                <td>".$row['amount']."</td>";
                         }
                         echo "</table>";
                     } else {
