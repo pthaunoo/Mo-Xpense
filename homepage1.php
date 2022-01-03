@@ -137,8 +137,7 @@ include("gettran.php");
 					echo "<table>";
 					echo "<tr>
 		             	<th>category</th>
-		             	<th>total</th>";
-                    echo "<tr>";     
+		             	<th>total</th>";   
 					while($row = mysqli_fetch_assoc($result)) {
 						echo "<tt>";
 						echo 
