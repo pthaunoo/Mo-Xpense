@@ -134,17 +134,17 @@ include("gettran.php");
 			
 				if (mysqli_num_rows($result) > 0) {
 				// output data of each row
-					 <table border=1 align='center'>
-					 <tr>
+					echo "<table border=1 align='center'>";
+					echo "<tr>
 		             	<th>category</th>
-		             	<th>total</th>;
+		             	<th>total</th>";
 					while($row = mysqli_fetch_assoc($result)) {
-						 <tr>;
-						 
-							<td>.$row['category'].</td>
-							<td>.$row['total'].</td>;
+						echo "<tr>";
+						echo 
+							"<td>".$row['category']."</td>
+							<td>".$row['total']."</td>";
 					}
-					 </table>;
+					echo "</table>";
 				} else {
 					echo "<h3 align='center'>No Results</h3>";
 				}
