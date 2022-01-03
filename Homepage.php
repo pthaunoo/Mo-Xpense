@@ -87,7 +87,7 @@ include("gettran.php");
                     <input type="radio" name="description" value="2" required/> Others<p>
                 </div>
                     <input type="submit" name="add_tran" class="button-submit" value="Add Transaction">
-        </form>
+            </form>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -95,7 +95,6 @@ include("gettran.php");
             <h2 class="big-text1">Analytics</h2>
             <div id="piechart" class="piechart"></div>
         </div>
-            
 
 </body>  
 </html>
